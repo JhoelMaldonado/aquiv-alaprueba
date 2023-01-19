@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>listar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="productos">
+  <ion-card *ngFor="let item of productos.products" >
+    <img [src]="item.thumbnail">
+    <ion-card-header>{{ item.title | uppercase }}</ion-card-header>
+    <ion-card-content>
+      <p>Categoria: {{ item.category }}</p>
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>
